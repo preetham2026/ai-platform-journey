@@ -5,10 +5,10 @@ owner = "Sunny"
 
 # Farm data
 cow_names = ["Bessie", "Daisy", "Rosie", "Luna", "Bella", 
-             "Molly", "Ruby", "Pearl", "Lola", "Maggie"]
+             "Molly", "Ruby", "Pearl", "Lola", "Maggie","clara"]
 
 daily_milk_liters = [28, 25, 30, 22, 27, 
-                     24, 29, 26, 23, 31]
+                     24, 29, 26, 23, 31,33]
 
 milk_price = 0.80
 
