@@ -1,0 +1,19 @@
+{
+  "farm_name": "Ritham Dairy Farm",
+  "owner": "Sunny",
+  "milk_price": 0.8,
+  "cows": [
+    {
+      "name": "Bessie",
+      "daily_milk": 28
+    },
+    {
+      "name": "Clara",
+      "daily_milk": 33
+    },
+    {
+      "name": "Bella",
+      "daily_milk": 35
+    }
+  ]
+}
