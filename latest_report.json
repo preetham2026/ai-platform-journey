@@ -1,0 +1,33 @@
+{
+  "date": "2026-06-03 09:51",
+  "farm": "Ritham Dairy Farm",
+  "owner": "Sunny",
+  "weather": {
+    "temperature": 77.6,
+    "humidity": 45,
+    "wind_speed": 11.8,
+    "rain": 0.0,
+    "success": true
+  },
+  "total_cows": 10,
+  "total_milk": 255,
+  "daily_revenue": 459.0,
+  "monthly_revenue": 13770.0,
+  "yearly_revenue": 167535.0,
+  "monthly_profit": 3320.0,
+  "sick_cows": [
+    "Daisy",
+    "Molly",
+    "Maggie"
+  ],
+  "retire_cows": [
+    "Luna"
+  ],
+  "star_cows": [
+    "Rosie",
+    "Bella",
+    "Ruby",
+    "Clara"
+  ],
+  "inventory_value": 1880.0
+}
