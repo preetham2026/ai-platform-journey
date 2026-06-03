@@ -1,0 +1,11 @@
+name,breed,age,daily_milk,is_healthy,barn,daily_revenue,monthly_revenue,grade
+Bessie,Holstein,3,28,True,A,42.0,1260.0,B
+Daisy,Jersey,5,15,False,A,22.5,675.0,D
+Rosie,Guernsey,4,30,True,B,45.0,1350.0,A
+Luna,Holstein,8,18,True,B,27.0,810.0,D
+Bella,Jersey,2,35,True,C,52.5,1575.0,A
+Molly,Guernsey,6,24,False,C,36.0,1080.0,C
+Ruby,Holstein,1,32,True,A,48.0,1440.0,A
+Pearl,Jersey,5,26,True,B,39.0,1170.0,B
+Clara,Jersey,2,33,True,B,49.5,1485.0,A
+Maggie,Holstein,9,14,False,A,21.0,630.0,D
