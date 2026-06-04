@@ -1,0 +1,67 @@
+name: Ritham Farm CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install flask requests pandas boto3
+
+    - name: Run basic test
+      run: |
+        python -c "
+        import flask
+        import pandas as pd
+        import boto3
+        print('✅ All imports successful!')
+        print('✅ Flask version:', flask.__version__)
+        print('✅ Pandas version:', pd.__version__)
+        "
+
+  build-docker:
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build Docker image
+      run: |
+        docker build -t ritham-farm-api:latest .
+        echo "✅ Docker image built successfully!"
+
+    - name: Test Docker image
+      run: |
+        docker run -d -p 5000:5000 --name farm-test ritham-farm-api:latest
+        sleep 5
+        curl -f http://localhost:5000 || exit 1
+        echo "✅ API is responding!"
+        docker stop farm-test
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: build-docker
+    
+    steps:
+    - name: Success notification
+      run: |
+        echo "🎉 Ritham Dairy Farm deployment pipeline completed!"
+        echo "✅ Code tested"
+        echo "✅ Docker image built"
+        echo "✅ API verified"
+        echo "🐄 Sunny's farm is ready!"
